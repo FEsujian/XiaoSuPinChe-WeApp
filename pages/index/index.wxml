@@ -1,0 +1,26 @@
+<!--index.wxml-->
+<view class="container">
+  <map style="width: 100%; height: 300px;"></map>
+  <text>车主信息</text>
+  <i-card title="前端工程师~苏健" extra="出发时间 18:00" full thumb="https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaEI5pozdCz0j8aEmoI4b5Zb7KvEKOYEpH4KWF9HxZBzrAOyeeKBNtMM9PHyAia02YR8eBEUKkcLNxJA/132">
+    <view slot="content">
+      <i-cell-group>
+        <i-cell title="只显示箭头" is-link></i-cell>
+        <i-cell title="跳转到首页" is-link url="/pages/dashboard/index"></i-cell>
+      </i-cell-group>
+    </view>
+  </i-card>
+  <text>预约信息</text>
+  <i-cell-group>
+    <i-cell title="只显示箭头" is-link></i-cell>
+    <i-cell title="跳转到首页" is-link url="/pages/dashboard/index"></i-cell>
+  </i-cell-group>
+
+
+  <view style="height:120rpx"></view>
+  <view class="reserve" bindtap="reserveClick">
+    <text class="text">还有4座,约起来</text>
+  </view>
+
+  <i-action-sheet visible="{{ visible1 }}" actions="{{ actions1 }}" show-cancel bind:cancel="handleCancel" bind:click="handleClickItem1" />
+</view>
